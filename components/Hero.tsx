@@ -6,6 +6,7 @@
 // import { ArrowRight, Factory, Phone } from "lucide-react";
 
 // export default function Hero() {
+// const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 //   return (
 //     <section className="relative overflow-hidden min-h-[520px] md:min-h-[600px] flex items-center">
 //       {/* Background Image */}
@@ -60,13 +61,13 @@
 //               <ArrowRight className="h-5 w-5" />
 //             </Link>
 
-//             <a
-//               href="tel:+923001234567"
-//               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-brand-yellow hover:bg-white/20"
-//             >
-//               <Phone className="h-5 w-5" />
-//               Call Now
-//             </a>
+//                    <a
+//   href={`tel:+${phoneNumber}`}
+//   className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-7 py-3 font-semibold text-gray-700 transition hover:border-brand-yellow hover:text-brand-yellow"
+// >
+//   <Phone className="h-5 w-5" />
+//   Call Now
+// </a>
 //           </div>
 //         </motion.div>
 //       </div>
