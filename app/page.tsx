@@ -4,6 +4,7 @@ import Products from "@/components/Products";
 import Castables from "@/components/Castables";
 import Services from "@/components/Services";
 import Industries from "@/components/Industries";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Castables/>
       <Services/>
       <Industries/>
+      <Contact/>
     </main>
   );
 }

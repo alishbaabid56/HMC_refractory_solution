@@ -177,4 +177,8 @@
     background: #f5b400;
     color: #111111;
   }
+
+  .input-style {
+  @apply w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-yellow-400;
+}
 }
