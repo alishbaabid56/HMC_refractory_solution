@@ -56,7 +56,7 @@ export default function Castables() {
   return (
     <section
       id="castables"
-      className="bg-white py-14 md:py-20"
+      className="bg-gray-50 py-14 md:py-20"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -70,7 +70,7 @@ export default function Castables() {
         >
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 px-4 py-2 text-sm font-medium text-brand-black">
             <Flame className="h-4 w-4 text-brand-yellow" />
-            Castables & Cement
+            Our Products
           </div>
 
           <h2 className="font-heading text-3xl font-bold text-brand-black sm:text-4xl">

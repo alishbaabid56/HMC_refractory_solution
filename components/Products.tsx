@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 import { Flame } from "lucide-react";
 
 const products = [
+      {
+    name: "Fire Bricks",
+    description:
+      "Reliable refractory bricks built for high-temperature industrial furnace applications.",
+    image: "/images/products/bricks.jpeg",
+  },
   {
     name: "Rock Wool",
     description:
@@ -23,19 +29,14 @@ const products = [
       "Efficient thermal insulation material offering durability and energy performance.",
     image: "/images/products/glass.jpeg",
   },
-  {
-    name: "Fire Bricks",
-    description:
-      "Reliable refractory bricks built for high-temperature industrial furnace applications.",
-    image: "/images/products/bricks.jpeg",
-  },
+
 ];
 
 export default function Products() {
   return (
     <section
       id="products"
-      className="bg-slate-50 py-14 md:py-20"
+      className="bg-white py-14 md:py-20"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -50,7 +51,7 @@ export default function Products() {
 
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-yellow/15 px-4 py-2 text-sm font-medium text-brand-black">
             <Flame className="h-4 w-4 text-brand-yellow" />
-            Our Products
+            Insulation Products
           </div>
 
 

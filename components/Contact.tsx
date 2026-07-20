@@ -369,7 +369,7 @@ ${formData.message}
                   </p>
 
                   <p className="text-sm text-gray-600">
-                    info@hmcrefractory.com
+                    hasnainmemon7b1@gmail.com
                   </p>
 
                 </div>
@@ -414,8 +414,7 @@ ${formData.message}
 
 
                   <p className="text-sm leading-6 text-gray-600">
-                    HMC Refractory Solution,
-                    Pakistan
+                    Site Area, Jamia Binoriya, Near Attock Petrol Pump
                   </p>
 
 
