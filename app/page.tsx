@@ -5,6 +5,8 @@ import Castables from "@/components/Castables";
 import Services from "@/components/Services";
 import Industries from "@/components/Industries";
 import Contact from "@/components/Contact";
+import Map from "@/components/Map";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Services/>
       <Industries/>
       <Contact/>
+      <Map/>
+      <CTA/>
     </main>
   );
 }
