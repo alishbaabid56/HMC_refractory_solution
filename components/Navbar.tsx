@@ -84,7 +84,7 @@ const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
           {/* Home */}
 
           <Link
-            href="/"
+            href="#hero"
             className="
             text-sm
             font-medium
@@ -356,7 +356,7 @@ const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   {/* Home + About */}
   {[
-    { label: "Home", href: "/" },
+    { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
   ].map((item) => (
     <SheetClose key={item.label}>
