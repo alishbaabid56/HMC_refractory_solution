@@ -1,3 +1,690 @@
+// "use client";
+
+// import { useState } from "react";
+// import { motion } from "framer-motion";
+// import {
+//   Mail,
+//   Phone,
+//   MapPin,
+//   Factory,
+//   Send,
+// } from "lucide-react";
+
+
+// export default function Contact() {
+
+//   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     company: "",
+//     phone: "",
+//     email: "",
+//     industry: "",
+//     service: "",
+//     message: "",
+//   });
+
+
+
+//   const handleChange = (
+//     e: React.ChangeEvent<
+//       HTMLInputElement |
+//       HTMLTextAreaElement |
+//       HTMLSelectElement
+//     >
+//   ) => {
+
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+
+//   };
+
+
+
+
+//   const handleSubmit = (
+//     e: React.FormEvent
+//   ) => {
+
+//     e.preventDefault();
+
+
+//     const message = `
+// New Inquiry - HMC Refractory Solution
+
+// Name:
+// ${formData.name}
+
+// Company:
+// ${formData.company}
+
+// Phone:
+// ${formData.phone}
+
+// Email:
+// ${formData.email}
+
+// Industry:
+// ${formData.industry}
+
+// Required Service:
+// ${formData.service}
+
+// Message:
+// ${formData.message}
+//     `;
+
+
+
+//     const url =
+//       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+//         message
+//       )}`;
+
+
+//     window.open(
+//       url,
+//       "_blank"
+//     );
+
+//   };
+
+
+
+
+
+//   return (
+
+//     <section
+//       id="contact"
+//       className="bg-slate-50 py-14 md:py-20"
+//     >
+
+//       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+
+//         {/* Heading */}
+
+//         <motion.div
+
+//           initial={{
+//             opacity:0,
+//             y:25
+//           }}
+
+//           whileInView={{
+//             opacity:1,
+//             y:0
+//           }}
+
+//           transition={{
+//             duration:0.6
+//           }}
+
+//           viewport={{
+//             once:true
+//           }}
+
+//           className="mx-auto max-w-3xl text-center"
+
+//         >
+
+
+//           <div
+//             className="
+//             inline-flex
+//             items-center
+//             gap-2
+//             rounded-full
+//             bg-brand-yellow/15
+//             px-4
+//             py-2
+//             text-sm
+//             font-medium
+//             text-brand-black
+//             "
+//           >
+
+//             <Factory className="h-4 w-4 text-brand-yellow"/>
+
+//             Contact Us
+
+//           </div>
+
+
+
+
+//           <h2
+//             className="
+//             mt-5
+//             font-heading
+//             text-3xl
+//             font-bold
+//             text-brand-black
+//             sm:text-4xl
+//             "
+//           >
+
+//             Let's Discuss Your
+
+//             <span className="block text-brand-yellow">
+//               Industrial Requirements
+//             </span>
+
+//           </h2>
+
+
+
+
+//           <p
+//             className="
+//             mx-auto
+//             mt-4
+//             max-w-2xl
+//             text-sm
+//             leading-7
+//             text-gray-600
+//             sm:text-base
+//             "
+//           >
+
+//             Contact HMC Refractory Solution for reliable
+//             refractory products, installation services,
+//             and high-temperature industrial solutions.
+
+//           </p>
+
+
+//         </motion.div>
+
+
+
+
+
+//         {/* Main Content */}
+
+//         <div
+//           className="
+//           mt-12
+//           grid
+//           gap-6
+//           lg:grid-cols-2
+//           lg:gap-8
+//           " 
+//         >
+
+
+
+
+
+//           {/* Company Information */}
+
+
+//           <motion.div
+
+//             initial={{
+//               opacity:0,
+//               x:-30
+//             }}
+
+//             whileInView={{
+//               opacity:1,
+//               x:0
+//             }}
+
+//             transition={{
+//               duration:0.6
+//             }}
+
+//             viewport={{
+//               once:true
+//             }}
+
+//           >
+
+
+
+//             <h3
+//               className="
+//               text-2xl
+//               font-bold
+//               text-brand-black
+//               "
+//             >
+
+//               HMC Refractory Solution
+
+//             </h3>
+
+
+
+
+//             <p
+//               className="
+//               mt-4
+//               max-w-md
+//               text-sm
+//               leading-7
+//               text-gray-600
+//               "
+//             >
+
+//               Providing professional refractory solutions
+//               for boilers, furnaces, kilns, and other
+//               high-temperature industrial applications.
+
+//             </p>
+
+
+
+
+
+//             {/* Contact Details */}
+
+//             <div
+//               className="
+//               mt-8
+//               space-y-5
+//               "
+//             >
+
+
+
+//               {/* Phone */}
+
+//               <div className="flex items-center gap-4">
+
+
+//                 <div
+//                   className="
+//                   flex
+//                   h-10
+//                   w-10
+//                   shrink-0
+//                   items-center
+//                   justify-center
+//                   rounded-lg
+//                   bg-brand-yellow/15
+//                   "
+//                 >
+
+//                   <Phone className="h-5 w-5 text-brand-yellow"/>
+
+//                 </div>
+
+
+
+//                 <div>
+
+//                   <p className="text-sm font-semibold text-brand-black">
+//                     Phone / WhatsApp
+//                   </p>
+
+//                   <p className="text-sm text-gray-600">
+//                     +92 3170221769
+//                   </p>
+
+//                 </div>
+
+
+//               </div>
+
+
+
+
+
+
+//               {/* Email */}
+
+//               <div className="flex items-center gap-4">
+
+
+//                 <div
+//                   className="
+//                   flex
+//                   h-10
+//                   w-10
+//                   shrink-0
+//                   items-center
+//                   justify-center
+//                   rounded-lg
+//                   bg-brand-yellow/15
+//                   "
+//                 >
+
+//                   <Mail className="h-5 w-5 text-brand-yellow"/>
+
+//                 </div>
+
+
+
+//                 <div>
+
+//                   <p className="text-sm font-semibold text-brand-black">
+//                     Email Address
+//                   </p>
+
+//                   <p className="text-sm text-gray-600">
+//                     hasnainmemon7b1@gmail.com
+//                   </p>
+
+//                 </div>
+
+
+//               </div>
+
+
+
+
+
+
+//               {/* Address */}
+
+//               <div className="flex items-start gap-4">
+
+
+//                 <div
+//                   className="
+//                   flex
+//                   h-10
+//                   w-10
+//                   shrink-0
+//                   items-center
+//                   justify-center
+//                   rounded-lg
+//                   bg-brand-yellow/15
+//                   "
+//                 >
+
+//                   <MapPin className="h-5 w-5 text-brand-yellow"/>
+
+//                 </div>
+
+
+
+//                 <div>
+
+//                   <p className="text-sm font-semibold text-brand-black">
+//                     Company Address
+//                   </p>
+
+
+//                   <p className="text-sm leading-6 text-gray-600">
+//                     Site Area, Jamia Binoriya, Near Attock Petrol Pump
+//                   </p>
+
+
+//                 </div>
+
+
+//               </div>
+
+
+
+//             </div>
+
+
+//           </motion.div>          {/* Contact Form */}
+
+
+//           <motion.form
+
+//             onSubmit={handleSubmit}
+
+//             initial={{
+//               opacity:0,
+//               x:30
+//             }}
+
+//             whileInView={{
+//               opacity:1,
+//               x:0
+//             }}
+
+//             transition={{
+//               duration:0.6
+//             }}
+
+//             viewport={{
+//               once:true
+//             }}
+
+//             className="
+//             rounded-2xl
+//             border
+//             border-gray-200
+//             bg-white
+//             p-6
+//             shadow-md
+//             "
+
+//           >
+
+
+
+
+
+//             <div className="grid gap-4 sm:grid-cols-2">
+
+
+
+//               <input
+//                 name="name"
+//                 placeholder="Your Name"
+//                 required
+//                 onChange={handleChange}
+//                 className="input-style"
+//               />
+
+
+
+//               <input
+//                 name="company"
+//                 placeholder="Company Name"
+//                 onChange={handleChange}
+//                 className="input-style"
+//               />
+
+
+
+//               <input
+//                 name="phone"
+//                 placeholder="Phone Number"
+//                 required
+//                 onChange={handleChange}
+//                 className="input-style"
+//               />
+
+
+
+//               <input
+//                 name="email"
+//                 placeholder="Email Address"
+//                 onChange={handleChange}
+//                 className="input-style"
+//               />
+
+
+//             </div>
+
+
+
+
+
+
+
+
+//             <select
+//               name="industry"
+//               onChange={handleChange}
+//               className="input-style mt-4"
+//             >
+
+//               <option>
+//                 Select Industry
+//               </option>
+
+
+//               <option>
+//                 Steel Mill
+//               </option>
+
+
+//               <option>
+//                 Cement Factory
+//               </option>
+
+
+//               <option>
+//                 Glass Factory
+//               </option>
+
+
+//               <option>
+//                 Power Plant
+//               </option>
+
+
+//               <option>
+//                 Textile Mill
+//               </option>
+
+
+//               <option>
+//                 Other
+//               </option>
+
+
+//             </select>
+
+
+
+
+
+
+
+
+//             <select
+//               name="service"
+//               onChange={handleChange}
+//               className="input-style mt-4"
+//             >
+
+
+//               <option>
+//                 Required Service
+//               </option>
+
+
+
+//               <option>
+//                 Refractory Products
+//               </option>
+
+
+
+//               <option>
+//                 Refractory Installation
+//               </option>
+
+
+
+//               <option>
+//                 Boiler Refractory Work
+//               </option>
+
+
+
+//               <option>
+//                 Furnace & Kiln Solutions
+//               </option>
+
+
+
+//             </select>
+
+
+
+
+
+
+
+
+//             <textarea
+
+//               name="message"
+
+//               rows={4}
+
+//               placeholder="Describe Your Requirement"
+
+//               onChange={handleChange}
+
+//               className="input-style mt-4"
+
+//             />
+
+
+
+
+
+
+
+
+
+//             <button
+
+//               type="submit"
+
+//               className="
+//               mt-5
+//               flex
+//               w-full
+//               items-center
+//               justify-center
+//               gap-2
+//               rounded-full
+//               bg-brand-yellow
+//               py-3
+//               font-semibold
+//               text-black
+//               transition
+//               hover:bg-yellow-500
+//               "
+
+//             >
+
+//               Send Inquiry
+
+
+//               <Send className="h-4 w-4"/>
+
+
+//             </button>
+
+
+
+//           </motion.form>
+
+
+
+//         </div>
+
+
+//       </div>
+
+
+//     </section>
+
+//   );
+
+// }
+
+
 "use client";
 
 import { useState } from "react";
@@ -13,7 +700,11 @@ import {
 
 export default function Contact() {
 
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+  const [loading, setLoading] = useState(false);
+
+  const [status, setStatus] = useState("");
+
 
 
   const [formData, setFormData] = useState({
@@ -25,6 +716,7 @@ export default function Contact() {
     service: "",
     message: "",
   });
+
 
 
 
@@ -46,50 +738,96 @@ export default function Contact() {
 
 
 
-  const handleSubmit = (
+
+
+  const handleSubmit = async (
     e: React.FormEvent
   ) => {
 
     e.preventDefault();
 
 
-    const message = `
-New Inquiry - HMC Refractory Solution
-
-Name:
-${formData.name}
-
-Company:
-${formData.company}
-
-Phone:
-${formData.phone}
-
-Email:
-${formData.email}
-
-Industry:
-${formData.industry}
-
-Required Service:
-${formData.service}
-
-Message:
-${formData.message}
-    `;
+    setLoading(true);
+    setStatus("");
 
 
 
-    const url =
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        message
-      )}`;
+    try {
 
 
-    window.open(
-      url,
-      "_blank"
-    );
+      const response = await fetch(
+        "/api/contact",
+        {
+          method: "POST",
+
+          headers:{
+            "Content-Type":"application/json",
+          },
+
+          body: JSON.stringify(formData),
+
+        }
+      );
+
+
+
+
+      const data = await response.json();
+
+
+
+
+      if(data.success){
+
+        setStatus(
+          "Your inquiry has been sent successfully!"
+        );
+
+
+        setFormData({
+          name:"",
+          company:"",
+          phone:"",
+          email:"",
+          industry:"",
+          service:"",
+          message:"",
+        });
+
+
+      }
+
+      else{
+
+        setStatus(
+          "Something went wrong. Please try again."
+        );
+
+      }
+
+
+
+
+    }
+
+    catch(error){
+
+      console.error(error);
+
+      setStatus(
+        "Failed to send inquiry."
+      );
+
+    }
+
+
+    finally{
+
+      setLoading(false);
+
+    }
+
+
 
   };
 
@@ -97,589 +835,552 @@ ${formData.message}
 
 
 
+
+
   return (
 
-    <section
-      id="contact"
-      className="bg-slate-50 py-14 md:py-20"
-    >
+<section
+id="contact"
+className="bg-slate-50 py-14 md:py-20"
+>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
+<div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* Heading */}
 
-        <motion.div
 
-          initial={{
-            opacity:0,
-            y:25
-          }}
+<motion.div
 
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
+initial={{
+opacity:0,
+y:25
+}}
 
-          transition={{
-            duration:0.6
-          }}
+whileInView={{
+opacity:1,
+y:0
+}}
 
-          viewport={{
-            once:true
-          }}
+transition={{
+duration:0.6
+}}
 
-          className="mx-auto max-w-3xl text-center"
+viewport={{
+once:true
+}}
 
-        >
+className="mx-auto max-w-3xl text-center"
 
+>
 
-          <div
-            className="
-            inline-flex
-            items-center
-            gap-2
-            rounded-full
-            bg-brand-yellow/15
-            px-4
-            py-2
-            text-sm
-            font-medium
-            text-brand-black
-            "
-          >
 
-            <Factory className="h-4 w-4 text-brand-yellow"/>
+<div
+className="
+inline-flex
+items-center
+gap-2
+rounded-full
+bg-brand-yellow/15
+px-4
+py-2
+text-sm
+font-medium
+text-brand-black
+"
+>
 
-            Contact Us
+<Factory className="h-4 w-4 text-brand-yellow"/>
 
-          </div>
+Contact Us
 
+</div>
 
 
 
-          <h2
-            className="
-            mt-5
-            font-heading
-            text-3xl
-            font-bold
-            text-brand-black
-            sm:text-4xl
-            "
-          >
 
-            Let's Discuss Your
+<h2
+className="
+mt-5
+font-heading
+text-3xl
+font-bold
+text-brand-black
+sm:text-4xl
+"
+>
 
-            <span className="block text-brand-yellow">
-              Industrial Requirements
-            </span>
+Let's Discuss Your
 
-          </h2>
+<span className="block text-brand-yellow">
+Industrial Requirements
+</span>
 
+</h2>
 
 
 
-          <p
-            className="
-            mx-auto
-            mt-4
-            max-w-2xl
-            text-sm
-            leading-7
-            text-gray-600
-            sm:text-base
-            "
-          >
 
-            Contact HMC Refractory Solution for reliable
-            refractory products, installation services,
-            and high-temperature industrial solutions.
+<p
+className="
+mx-auto
+mt-4
+max-w-2xl
+text-sm
+leading-7
+text-gray-600
+sm:text-base
+"
+>
 
-          </p>
+Contact HMC Refractory Solution for reliable
+refractory products, installation services,
+and high-temperature industrial solutions.
 
+</p>
 
-        </motion.div>
 
 
+</motion.div>
 
 
 
-        {/* Main Content */}
 
-        <div
-          className="
-          mt-12
-          grid
-          gap-6
-          lg:grid-cols-2
-          lg:gap-8
-          " 
-        >
 
 
+<div
+className="
+mt-12
+grid
+gap-6
+lg:grid-cols-2
+lg:gap-8
+"
+>
 
 
 
-          {/* Company Information */}
 
 
-          <motion.div
+{/* LEFT SIDE */}
 
-            initial={{
-              opacity:0,
-              x:-30
-            }}
+<motion.div
 
-            whileInView={{
-              opacity:1,
-              x:0
-            }}
+initial={{
+opacity:0,
+x:-30
+}}
 
-            transition={{
-              duration:0.6
-            }}
+whileInView={{
+opacity:1,
+x:0
+}}
 
-            viewport={{
-              once:true
-            }}
+transition={{
+duration:0.6
+}}
 
-          >
+viewport={{
+once:true
+}}
 
+>
 
 
-            <h3
-              className="
-              text-2xl
-              font-bold
-              text-brand-black
-              "
-            >
+<h3
+className="
+text-2xl
+font-bold
+text-brand-black
+"
+>
 
-              HMC Refractory Solution
+HMC Refractory Solution
 
-            </h3>
+</h3>
 
 
 
 
-            <p
-              className="
-              mt-4
-              max-w-md
-              text-sm
-              leading-7
-              text-gray-600
-              "
-            >
+<p
+className="
+mt-4
+max-w-md
+text-sm
+leading-7
+text-gray-600
+"
+>
 
-              Providing professional refractory solutions
-              for boilers, furnaces, kilns, and other
-              high-temperature industrial applications.
+Providing professional refractory solutions
+for boilers, furnaces, kilns, and other
+high-temperature industrial applications.
 
-            </p>
+</p>
 
 
 
 
+<div
+className="
+mt-8
+space-y-5
+"
+>
 
-            {/* Contact Details */}
 
-            <div
-              className="
-              mt-8
-              space-y-5
-              "
-            >
+<div className="flex items-center gap-4">
 
+<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-yellow/15">
 
+<Phone className="h-5 w-5 text-brand-yellow"/>
 
-              {/* Phone */}
+</div>
 
-              <div className="flex items-center gap-4">
 
+<div>
 
-                <div
-                  className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-lg
-                  bg-brand-yellow/15
-                  "
-                >
+<p className="text-sm font-semibold text-brand-black">
+Phone / WhatsApp
+</p>
 
-                  <Phone className="h-5 w-5 text-brand-yellow"/>
+<p className="text-sm text-gray-600">
++92 3170221769
+</p>
 
-                </div>
+</div>
 
 
+</div>
 
-                <div>
 
-                  <p className="text-sm font-semibold text-brand-black">
-                    Phone / WhatsApp
-                  </p>
 
-                  <p className="text-sm text-gray-600">
-                    +92 3170221769
-                  </p>
 
-                </div>
 
+<div className="flex items-center gap-4">
 
-              </div>
+<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-yellow/15">
 
+<Mail className="h-5 w-5 text-brand-yellow"/>
 
+</div>
 
 
+<div>
 
+<p className="text-sm font-semibold text-brand-black">
+Email Address
+</p>
 
-              {/* Email */}
+<p className="text-sm text-gray-600">
+hasnainmemon7b1@gmail.com
+</p>
 
-              <div className="flex items-center gap-4">
+</div>
 
 
-                <div
-                  className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-lg
-                  bg-brand-yellow/15
-                  "
-                >
+</div>
 
-                  <Mail className="h-5 w-5 text-brand-yellow"/>
 
-                </div>
 
 
 
-                <div>
+<div className="flex items-start gap-4">
 
-                  <p className="text-sm font-semibold text-brand-black">
-                    Email Address
-                  </p>
 
-                  <p className="text-sm text-gray-600">
-                    hasnainmemon7b1@gmail.com
-                  </p>
+<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-yellow/15">
 
-                </div>
+<MapPin className="h-5 w-5 text-brand-yellow"/>
 
+</div>
 
-              </div>
 
 
+<div>
 
+<p className="text-sm font-semibold text-brand-black">
+Company Address
+</p>
 
 
+<p className="text-sm leading-6 text-gray-600">
+Site Area, Jamia Binoriya, Near Attock Petrol Pump
+</p>
 
-              {/* Address */}
 
-              <div className="flex items-start gap-4">
+</div>
 
 
-                <div
-                  className="
-                  flex
-                  h-10
-                  w-10
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-lg
-                  bg-brand-yellow/15
-                  "
-                >
 
-                  <MapPin className="h-5 w-5 text-brand-yellow"/>
+</div>
 
-                </div>
 
+</div>
 
 
-                <div>
 
-                  <p className="text-sm font-semibold text-brand-black">
-                    Company Address
-                  </p>
+</motion.div>
 
 
-                  <p className="text-sm leading-6 text-gray-600">
-                    Site Area, Jamia Binoriya, Near Attock Petrol Pump
-                  </p>
 
 
-                </div>
 
 
-              </div>
 
 
 
-            </div>
+{/* FORM */}
 
 
-          </motion.div>          {/* Contact Form */}
+<motion.form
 
+onSubmit={handleSubmit}
 
-          <motion.form
+initial={{
+opacity:0,
+x:30
+}}
 
-            onSubmit={handleSubmit}
+whileInView={{
+opacity:1,
+x:0
+}}
 
-            initial={{
-              opacity:0,
-              x:30
-            }}
+transition={{
+duration:0.6
+}}
 
-            whileInView={{
-              opacity:1,
-              x:0
-            }}
+viewport={{
+once:true
+}}
 
-            transition={{
-              duration:0.6
-            }}
+className="
+rounded-2xl
+border
+border-gray-200
+bg-white
+p-6
+shadow-md
+"
 
-            viewport={{
-              once:true
-            }}
+>
 
-            className="
-            rounded-2xl
-            border
-            border-gray-200
-            bg-white
-            p-6
-            shadow-md
-            "
 
-          >
 
 
+<div className="grid gap-4 sm:grid-cols-2">
 
 
+<input
+name="name"
+placeholder="Your Name"
+required
+value={formData.name}
+onChange={handleChange}
+className="input-style"
+/>
 
-            <div className="grid gap-4 sm:grid-cols-2">
 
 
+<input
+name="company"
+placeholder="Company Name"
+value={formData.company}
+onChange={handleChange}
+className="input-style"
+/>
 
-              <input
-                name="name"
-                placeholder="Your Name"
-                required
-                onChange={handleChange}
-                className="input-style"
-              />
 
 
+<input
+name="phone"
+placeholder="Phone Number"
+required
+value={formData.phone}
+onChange={handleChange}
+className="input-style"
+/>
 
-              <input
-                name="company"
-                placeholder="Company Name"
-                onChange={handleChange}
-                className="input-style"
-              />
 
 
+<input
+name="email"
+placeholder="Email Address"
+value={formData.email}
+onChange={handleChange}
+className="input-style"
+/>
 
-              <input
-                name="phone"
-                placeholder="Phone Number"
-                required
-                onChange={handleChange}
-                className="input-style"
-              />
 
+</div>
 
 
-              <input
-                name="email"
-                placeholder="Email Address"
-                onChange={handleChange}
-                className="input-style"
-              />
 
 
-            </div>
 
 
+<select
+name="industry"
+value={formData.industry}
+onChange={handleChange}
+className="input-style mt-4"
+>
 
+<option value="">
+Select Industry
+</option>
 
+<option>Steel Mill</option>
+<option>Cement Factory</option>
+<option>Glass Factory</option>
+<option>Power Plant</option>
+<option>Textile Mill</option>
+<option>Other</option>
 
+</select>
 
 
 
-            <select
-              name="industry"
-              onChange={handleChange}
-              className="input-style mt-4"
-            >
 
-              <option>
-                Select Industry
-              </option>
 
 
-              <option>
-                Steel Mill
-              </option>
 
+<select
+name="service"
+value={formData.service}
+onChange={handleChange}
+className="input-style mt-4"
+>
 
-              <option>
-                Cement Factory
-              </option>
+<option value="">
+Required Service
+</option>
 
+<option>
+Refractory Products
+</option>
 
-              <option>
-                Glass Factory
-              </option>
+<option>
+Refractory Installation
+</option>
 
+<option>
+Boiler Refractory Work
+</option>
 
-              <option>
-                Power Plant
-              </option>
+<option>
+Furnace & Kiln Solutions
+</option>
 
 
-              <option>
-                Textile Mill
-              </option>
+</select>
 
 
-              <option>
-                Other
-              </option>
 
 
-            </select>
 
 
+<textarea
 
+name="message"
 
+rows={4}
 
+placeholder="Describe Your Requirement"
 
+value={formData.message}
 
+onChange={handleChange}
 
-            <select
-              name="service"
-              onChange={handleChange}
-              className="input-style mt-4"
-            >
+className="input-style mt-4"
 
+/>
 
-              <option>
-                Required Service
-              </option>
 
 
 
-              <option>
-                Refractory Products
-              </option>
 
+<button
 
+type="submit"
 
-              <option>
-                Refractory Installation
-              </option>
+disabled={loading}
 
+className="
+mt-5
+flex
+w-full
+items-center
+justify-center
+gap-2
+rounded-full
+bg-brand-yellow
+py-3
+font-semibold
+text-black
+transition
+hover:bg-yellow-500
+disabled:opacity-50
+"
 
+>
 
-              <option>
-                Boiler Refractory Work
-              </option>
 
+{
+loading
+?
+"Sending..."
+:
+"Send Inquiry"
+}
 
 
-              <option>
-                Furnace & Kiln Solutions
-              </option>
 
+<Send className="h-4 w-4"/>
 
 
-            </select>
+</button>
 
 
 
 
 
+{
+status && (
 
+<p
+className="
+mt-4
+text-center
+text-sm
+font-medium
+text-green-600
+"
+>
 
+{status}
 
-            <textarea
+</p>
 
-              name="message"
+)
 
-              rows={4}
+}
 
-              placeholder="Describe Your Requirement"
 
-              onChange={handleChange}
 
-              className="input-style mt-4"
+</motion.form>
 
-            />
 
 
+</div>
 
 
+</div>
 
 
+</section>
 
-
-
-            <button
-
-              type="submit"
-
-              className="
-              mt-5
-              flex
-              w-full
-              items-center
-              justify-center
-              gap-2
-              rounded-full
-              bg-brand-yellow
-              py-3
-              font-semibold
-              text-black
-              transition
-              hover:bg-yellow-500
-              "
-
-            >
-
-              Send Inquiry
-
-
-              <Send className="h-4 w-4"/>
-
-
-            </button>
-
-
-
-          </motion.form>
-
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
 
   );
 
 }
+
